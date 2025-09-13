@@ -47,6 +47,13 @@ table {
 	border-spacing: 0;
 }
 /** end reset css**/
+
+:root {
+	--color-h1: #B1663C;
+    --color-main: #1D6154;
+	--color-input: white;
+}
+
 body {
 	max-width: 1140px;
 	margin:auto;
@@ -68,7 +75,7 @@ h1{
 	font-family: 'Syne';
 	font-size: 22px;
 	font-weight: 800;
-	color: #B1663C
+	color: var(--color-h1);
 }
 
 h1 > span {
@@ -82,7 +89,7 @@ h2{
 	font-family: 'Syne';
 	font-weight: 700;
 	font-size: 30px;
-	color: #1D6154
+	color: var(--color-main);
 }
 nav ul {
 	display: flex;
@@ -96,7 +103,7 @@ nav li {
 }
 
 li:hover {
-	color: #B1663C;
+	color: var(--color-h1);
 }
 #introduction {
 	display: flex;
@@ -125,6 +132,36 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+/*********** FILTER ***********/
+
+.container-filter {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+	margin-bottom: 40px;
+    gap: 10px;
+}
+
+.button-filter {
+    padding: 1px 15px;
+    height: 37px;
+    border-radius: 60px;
+    border: 1px solid var(--color-main);
+    background-color: white;
+	font-family: 'Syne';
+    font-size: 16px;
+    font-weight: bold;
+	color: var(--color-main);
+    cursor: pointer;
+}
+
+.button-filter.active-filter {
+  background-color: var(--color-main);
+  color: white;
+}
+
+/*********** GALLERY ***********/
 .gallery {
 	width: 100%;
 	display: grid;
@@ -172,8 +209,8 @@ margin: auto;
 input[type="submit"]{
 	font-family: 'Syne';
 	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
+	color: var(--color-input);
+	background-color: var(--color-main);
 	margin : 2em auto ;
 	width: 180px;
 	text-align: center;
